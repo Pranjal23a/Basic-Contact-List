@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>
+        <%= locals.title%>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1 id="page-heading">
+        <i class="fas fa-address-book"></i>
+        My Contacts List
+    </h1>
+    <ul>
+        <% for(let i of contact_List){%>
+            <div id="contacts">
+                <li>
+                    <span>
+                        <%= i.name%>
+                    </span>
+                    <a href="/delete-contact/?phone=<%= i.phone%>"><i id="close" class="fa-regular fa-rectangle-xmark"></i></a>
+                    <span id="phone">
+                        <%= i.phone%>
+                    </span>
+                </li>
+            </div>
+            <%}%>
+    </ul>
+    <div>
+        <form action="/add-contact" method="POST">
+            <div id="form">
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <input type="number" name="phone" placeholder="Enter Phone" required>
+                <button type="submit">Add</button>
+            </div>
+
+        </form>
+    </div>
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+
+</html>
