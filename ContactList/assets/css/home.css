@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+#page-heading{
+    text-align: center;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+li{
+    list-style-type: none;
+    /* text-align: center; */
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#close{
+    float: right;
+    background-color: red;
+    margin-left: 20px;
+    color: white;
+}
+#phone{
+    float: right;
+}
+#contacts{
+    margin: auto;
+    background-color: #618EFF;
+    padding: 10px;
+    color: white;
+    width: 30%;
+    border: 2px solid rgb(248, 238, 221);
+}
+#contacts:hover{
+    background-color: grey;
+}
+
+form{
+    margin: auto;
+    width: 46%;
+}
+#form{
+    margin-left: 150px;
+}
+button{
+    background-color: grey;
+    color: white;
+    width: 15%;
+}
+input{
+    width: 30%;
+}
